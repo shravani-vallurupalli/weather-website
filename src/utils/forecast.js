@@ -14,7 +14,7 @@ const forecast = (lat, long, callback) =>{
         else{
             // console.log(response)
             callback(undefined, {
-                temperature: body.current.temperature,
+                temperature: `${body.current.weather_descriptions} in the morning. It is currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike}.`,
                 desc: body.current.weather_descriptions[0],
                 feelslike: body.current.feelslike
             })
